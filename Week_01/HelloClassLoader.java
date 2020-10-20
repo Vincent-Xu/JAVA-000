@@ -26,7 +26,7 @@ public class HelloClassLoader extends ClassLoader {
     @Override
     protected Class<?> findClass(String name) {
         try {
-            String path = "https://github.com/Vincent-Xu/JAVA-000/tree/main/Week_01";
+            String path = "F:\\WorkStation\\Java Learning\\JAVA-000\\Week_01";
             String fullPath = path + File.separator + name.replaceAll("\\.", "/") + ".xlass";
             File file = new File(fullPath);
             byte[] data = getClassFileBytes(file);
