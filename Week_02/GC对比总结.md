@@ -24,8 +24,8 @@ java -XX:+UseSerialGC -Xms4g -Xmx4g -Xloggc:SerialGC4.demo.log -XX:+PrintGCDetai
 | 4g | 15757 |
 
 ## 结论
-1.小内存512m和1g时，串行效果提升比较明显。但继续提升2g和4g效果不明显。
-2.不配置Xmx性能有所下降。
+1. 小内存512m和1g时，串行效果提升比较明显。但继续提升2g和4g效果不明显。
+2. 不配置Xmx性能有所下降。
 
 # ParallelGC
 ## 执行语句
@@ -45,9 +45,9 @@ java -XX:+UseParallelGC -Xms4g -Xmx4g -Xloggc:ParallelGC4.demo.log -XX:+PrintGCD
 | 4g | 17592 |
 
 ## 结论
-1.因为充分利用多线程，堆内存增大到4g提升比较明显。
-2.不配置Xmx性能有所下降。
-3.GC暂停时间较长。
+1. 因为充分利用多线程，堆内存增大到4g提升比较明显。
+2. 不配置Xmx性能有所下降。
+3. GC暂停时间较长。
 
 # CMS
 ## 执行语句
@@ -63,8 +63,8 @@ java -XX:+UseConcMarkSweepGC -Xms4g -Xmx4g -Xloggc:CMS4.demo.log -XX:+PrintGCDet
 | 4g | 16163 |
 
 ## 结论
-1.并发回收，暂停时间较短，随着堆内存增大性能有较大提升。
-2.不配置Xmx性能有所下降。
+1. 并发回收，暂停时间较短，随着堆内存增大性能有较大提升。
+2. 不配置Xmx性能有所下降。
 
 # G1
 ## 执行语句
@@ -79,8 +79,8 @@ java -XX:+UseG1GC -Xms4g -Xmx4g -Xloggc:G12.demo.log -XX:+PrintGCDetails -XX:+Pr
 | 4g | 18044 |
 
 ## 结论
-1.随着堆内存增大性能有较大提醒。
-2.不配置Xmx性能有所下降。
+1. 随着堆内存增大性能有较大提醒。
+2. 不配置Xmx性能有所下降。
 
 # sb压测结果
 | GC | Requests | Average |
@@ -91,9 +91,9 @@ java -XX:+UseG1GC -Xms4g -Xmx4g -Xloggc:G12.demo.log -XX:+PrintGCDetails -XX:+Pr
 
 
 # 横向对比
-1.内存小于1g时，SerialGC比ParallelGC性能更好。
-2.内存大于1g小于2g时，ParallelGC比SerialGC性能好。
-3.不配置Xms时性能都有所下降。
-4.CMS性能没有ParallelGC，但是GC暂停时间短。
-5.大内存下，G1性能都比SerialGC和ParallelGC、CMS好。
-6.G1吞吐量最高，ParallelGC平均延迟低一些。
+1. 内存小于1g时，SerialGC比ParallelGC性能更好。
+2. 内存大于1g小于2g时，ParallelGC比SerialGC性能好。
+3. 不配置Xms时性能都有所下降。
+4. CMS性能没有ParallelGC，但是GC暂停时间短。
+5. 大内存下，G1性能都比SerialGC和ParallelGC、CMS好。
+6. G1吞吐量最高，ParallelGC平均延迟低一些。
