@@ -91,9 +91,9 @@ java -XX:+UseG1GC -Xms4g -Xmx4g -Xloggc:G12.demo.log -XX:+PrintGCDetails -XX:+Pr
 
 
 # 横向对比
-1. 内存小于1g时，SerialGC比ParallelGC性能更好。
+1. 内存小于1g时，SerialGC比ParallelGC性能好。
 2. 内存大于1g小于2g时，ParallelGC比SerialGC性能好。
 3. 不配置Xms时性能都有所下降。
-4. CMS性能没有ParallelGC，但是GC暂停时间短。
+4. CMS性能比ParallelGC差，但是GC暂停时间短，延迟低。
 5. 大内存下，G1性能都比SerialGC和ParallelGC、CMS好。
 6. G1吞吐量最高，ParallelGC平均延迟低一些。
