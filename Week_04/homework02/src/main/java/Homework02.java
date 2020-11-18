@@ -1,11 +1,9 @@
-package src.main.java.homework02;
+package homework02.src.main.java;
 
 import com.sun.source.tree.WhileLoopTree;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
-import java.util.Optional;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Lock;
