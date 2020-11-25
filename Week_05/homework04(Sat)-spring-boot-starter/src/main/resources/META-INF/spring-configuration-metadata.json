@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "student",
+      "type": "com.vincent.entity.School",
+      "sourceType": "com.vincent.entity.School"
+    }
+  ],
+  "properties": [
+    {
+      "name": "student.student100",
+      "type": "com.vincent.entity.Student",
+      "sourceType": "com.vincent.entity.School"
+    }
+  ],
+  "hints": []
+}
