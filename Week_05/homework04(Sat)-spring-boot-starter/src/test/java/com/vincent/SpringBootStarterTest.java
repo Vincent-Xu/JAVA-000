@@ -1,5 +1,6 @@
 package com.vincent;
 
+import com.vincent.entity.Klass;
 import com.vincent.entity.School;
 import org.junit.Assert;
 import org.junit.Test;
@@ -18,10 +19,10 @@ import javax.annotation.Resource;
 @ActiveProfiles("common")
 public class SpringBootStarterTest {
     @Resource
-    School school;
+    Klass klass;
     @Test
     public void assertStudent(){
-        Assert.assertEquals(school.getStudent100().getId(), 11);
-        Assert.assertEquals(school.getStudent100().getName(), "Vincent Xu");
+        Assert.assertEquals(11, klass.getStudents().get(0).getId());
+        Assert.assertEquals("Vincent Xu",klass.getStudents().get(0).getName());
     }
 }

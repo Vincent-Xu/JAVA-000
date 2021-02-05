@@ -13,9 +13,9 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class PropertiesConfig {
-    @Bean
-    @ConfigurationPropertiesBinding
-    public StudentConverter studentConverter() {
-        return new StudentConverter();
-    }
+//    @Bean
+//    @ConfigurationPropertiesBinding
+//    public StudentConverter studentConverter() {
+//        return new StudentConverter();
+//    }
 }

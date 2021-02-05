@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+                        http://www.springframework.org/schema/context
+                        http://www.springframework.org/schema/context/spring-context-3.2.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+
+    <context:component-scan base-package="com.vincent" />
+
+    <aop:aspectj-autoproxy  />
+
+    <bean id="student1" class="com.vincent.entity.Student">
+        <property name="age" value="30"/>
+        <property name="name" value="vincent"/>
+    </bean>
+
+<!--    <bean id="studentSerivce1" class="com.vincent.service.impl.StudentServiceImpl"></bean>-->
+    <bean id="SpringDemoAOP" class="com.vincent.SpringDemoAOP"></bean>
+
+
+</beans>

@@ -10,9 +10,9 @@ import org.springframework.core.convert.converter.Converter;
  *@Description: Converter for student configuration
  *@CreatedTime:22:32 2020/11/25
  */
-public class StudentConverter implements Converter<String, Student> {
-    @Override
-    public Student convert(String s) {
-        return JSON.parseObject(s, Student.class);
-    }
-}
+//public class StudentConverter implements Converter<String, Student> {
+//    @Override
+//    public Student convert(String s) {
+//        return JSON.parseObject(s, Student.class);
+//    }
+//}

@@ -1,0 +1,14 @@
+spring:
+  iStarter:
+    enabled: true
+class1:
+  students:
+    cc:
+      id: 11
+      name: Vincent Xu
+    cs:
+      id: 12
+      name: Xiaoming Xu
+    base:
+      id: 13
+      name: Lei Li

@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "class1",
+      "type": "com.vincent.entity.Klass",
+      "sourceType": "com.vincent.entity.Klass"
+    }
+  ],
+  "properties": [
+    {
+      "name": "class1.students",
+      "type": "java.util.Map<java.lang.String,com.vincent.entity.Student>",
+      "sourceType": "com.vincent.entity.Klass"
+    }
+  ],
+  "hints": []
+}

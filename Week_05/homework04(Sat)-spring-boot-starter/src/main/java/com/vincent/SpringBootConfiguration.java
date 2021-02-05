@@ -1,6 +1,7 @@
 package com.vincent;
 
 
+import com.vincent.entity.Klass;
 import com.vincent.entity.School;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.SpringApplication;
@@ -21,15 +22,15 @@ import javax.annotation.Resource;
  *@CreatedTime:18:23 2020/11/18
  */
 @Configuration
-@EnableConfigurationProperties(School.class)
+@EnableConfigurationProperties(Klass.class)
 @ConditionalOnProperty(prefix = "spring.iStarter", name = "enabled", havingValue = "true", matchIfMissing = true)
 @RequiredArgsConstructor
 public class SpringBootConfiguration implements EnvironmentAware {
-    private final School school;
+    private final Klass klass;
 
     @Override
     public void setEnvironment(Environment environment) {
-        System.out.println(school);
+        System.out.println(klass);
         System.out.println(environment);
     }
 }
